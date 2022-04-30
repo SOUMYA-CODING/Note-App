@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NOTE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Custom strings -->
+    <string name="welcome">Welcome!</string>
+    <string name="welcome_tex">Remember everything is important. A place for your notes, ideas and list.</string>
+    <string name="start">Get Start</string>
+    <string name="search">Search</string>
+</resources>

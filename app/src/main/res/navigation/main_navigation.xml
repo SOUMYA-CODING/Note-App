@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainScreenDash">
+
+    <fragment
+        android:id="@+id/mainScreenDash"
+        android:name="com.example.noteapp.MainScreenDash"
+        android:label="fragment_main_screen_dash"
+        tools:layout="@layout/fragment_main_screen_dash" >
+        <action
+            android:id="@+id/action_mainScreenDash_to_addScreen2"
+            app:destination="@id/addScreen" />
+        <action
+            android:id="@+id/action_mainScreenDash_to_updateScreen"
+            app:destination="@id/updateScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addScreen"
+        android:name="com.example.noteapp.AddScreen"
+        android:label="fragment_add_screen"
+        tools:layout="@layout/fragment_add_screen" >
+        <action
+            android:id="@+id/action_addScreen_to_mainScreenDash2"
+            app:destination="@id/mainScreenDash" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateScreen"
+        android:name="com.example.noteapp.UpdateScreen"
+        android:label="fragment_update_screen"
+        tools:layout="@layout/fragment_update_screen" >
+        <action
+            android:id="@+id/action_updateScreen_to_mainScreenDash"
+            app:destination="@id/mainScreenDash" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.noteapp.database.UserData" />
+    </fragment>
+</navigation>
